@@ -1,7 +1,10 @@
-// filepath: /path/to/postcss.config.js
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+// postcss.config.mjs
+export default {
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss')({
+      config: './tailwind.config.js',
+    }),
+    require('autoprefixer'),
+  ],
+};
