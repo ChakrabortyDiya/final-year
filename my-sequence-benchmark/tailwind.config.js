@@ -9,6 +9,10 @@ module.exports = {
   theme: {
     extend: {},
   },
+  corePlugins: {
+    preflight: true,   // Ensures Tailwind resets are applied
+    layerUtilities: true, // Ensures @layer utilities is processed
+  },
   plugins: [],
 }
 
